@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from  '../../assets/bitcoin.png'
 import arrow from '../../assets/right-arrow.png'
 import { CoinContext } from '../../context/CoinContext'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -33,10 +34,14 @@ const currencyHandler = (event)=>{
   return (
 
     <div className='navbar'>
-        <div className='left-nav'><img src={logo} alt="" className='logoPic'/>
+      
+        <div className='left-nav'>
+          <Link to={'/'}>
+          <img src={logo} alt="" className='logoPic'/>
+          </Link>
         </div>
         <ul>
-            <li>Home</li>
+           <Link to={'/'}><li>Home</li></Link> 
             <li>Feature</li>
             <li>Pricing</li>
             <li>Blog</li>
